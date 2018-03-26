@@ -21,7 +21,7 @@ class Security(context: Context, private val preferences: SharedPreferences) {
   }
 
   fun getPassword(): String {
-    var password = preferences.getString(AccountManager.KEY_PASSWORD, null)
+    var password = preferences.getString(AccountManager.KEY_PASSWORD, "")
     val decrypted = r2d2.decryptData(password)
     if (decrypted != null && !decrypted.equals("", ignoreCase = true)) {
       password = decrypted

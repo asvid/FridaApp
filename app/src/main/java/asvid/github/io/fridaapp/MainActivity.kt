@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.pinResult
 
 class MainActivity : AppCompatActivity() {
 
-  public lateinit var security: Security
+  lateinit var security: Security
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     security = Security(this, getPreferences(Context.MODE_PRIVATE))
     runEverySecond()
     initViews()
+    showToast()
   }
 
   private fun initViews() {
@@ -88,5 +89,6 @@ class MainActivity : AppCompatActivity() {
 
   fun sum(x: Int, y: Int) {
     Log.d("Sum", (x + y).toString())
+    Logger.log("debug log $x $y")
   }
 }

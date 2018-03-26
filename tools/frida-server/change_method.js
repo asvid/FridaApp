@@ -1,5 +1,6 @@
 console.log("Script loaded successfully ");
-Java.perform(function x() { //Silently fails without the sleep from the python code
+Java.perform(function x() { 
+    
     console.log("Inside java perform function");
     //get a wrapper for our class
     var activity = Java.use("asvid.github.io.fridaapp.MainActivity");
@@ -11,14 +12,4 @@ Java.perform(function x() { //Silently fails without the sleep from the python c
         var ret_value = this.sum(2, 5);
         return ret_value;
     }
-
-    Java.choose("asvid.github.io.fridaapp.MainActivity" , {
-      onMatch : function(instance){ //This function will be called for every instance found by frida
-        console.log("Found instance: "+instance);
-        console.log("result:"+instance.getPassword());
-        instance.showToast();
-      },
-      onComplete:function(){}
-
-    });
 });
