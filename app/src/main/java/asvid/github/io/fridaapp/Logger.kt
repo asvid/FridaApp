@@ -8,7 +8,7 @@ object Logger {
 
   fun log(text: String) {
     if (showLogs)
-      Log.d("LOOGGER", text)
+      Log.d("LOGGER", text)
   }
 
 }

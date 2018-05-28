@@ -9,7 +9,7 @@ android {
     release {
       keyAlias 'frida'
       keyPassword 'fridaapp'
-      storeFile file('J:/repo/FridaApp/frida.jks')
+      storeFile file('../frida.jks')
       storePassword 'fridaapp'
     }
   }

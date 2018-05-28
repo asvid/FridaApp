@@ -1,3 +1,8 @@
 <resources>
   <string name="app_name">FridaApp</string>
+    <string name="text_will_be_encrypted_in_prefs">this text will be encrypted in SharedPrefs</string>
+  <string name="pin_text">type pin code - 1234</string>
+  <string name="correct_pin">correct PIN</string>
+  <string name="wrong_pin">wrong PIN</string>
+  <string name="toast_text">showing Toast!!! yay wow</string>
 </resources>
